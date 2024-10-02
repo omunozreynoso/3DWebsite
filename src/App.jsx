@@ -3,9 +3,10 @@ import About from './sections/About.jsx';
 import Footer from './sections/Footer.jsx';
 import Navbar from './sections/Navbar.jsx';
 import Contact from './sections/Contact.jsx';
-import Clients from './sections/Clients.jsx';
+import Education from './sections/Education.jsx';
 import Projects from './sections/Projects.jsx';
 import WorkExperience from './sections/Experience.jsx';
+import Programs from './sections/Programs.jsx';
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       <Hero />
       <About />
       <Projects />
-      <Clients />
+      <Education />
+      <Programs />
       <WorkExperience />
       <Contact />
       <Footer />

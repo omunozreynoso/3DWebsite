@@ -16,22 +16,24 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
+  //service_cks7o0l 
+  //template_5m1hh8e
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
 
     emailjs
       .send(
-        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        'service_cks7o0l',
+        'template_5m1hh8e',
         {
           from_name: form.name,
-          to_name: 'JavaScript Mastery',
+          to_name: 'Octavio',
           from_email: form.email,
-          to_email: 'sujata@jsmastery.pro',
+          to_email: 'octaviomunozreynoso@gmail.com',
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+        'Pk2e3sn16M5UqvYCZ'
       )
       .then(
         () => {
@@ -49,7 +51,7 @@ const Contact = () => {
               email: '',
               message: '',
             });
-          }, [3000]);
+          }, 3000);
         },
         (error) => {
           setLoading(false);
@@ -60,7 +62,7 @@ const Contact = () => {
             text: "I didn't receive your message 😢",
             type: 'danger',
           });
-        },
+        }
       );
   };
 
@@ -74,8 +76,7 @@ const Contact = () => {
         <div className="contact-container">
           <h3 className="head-text">Let's talk</h3>
           <p className="text-lg text-white-600 mt-3">
-            Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
-            life, I’m here to help.
+          If my qualifications align with your needs, think no further, contact me!
           </p>
 
           <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col space-y-7">
